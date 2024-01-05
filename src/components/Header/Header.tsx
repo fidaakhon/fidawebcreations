@@ -14,11 +14,12 @@ import HomeRepairServiceOutlinedIcon from '@mui/icons-material/HomeRepairService
 import CropOriginalOutlinedIcon from '@mui/icons-material/CropOriginalOutlined';
 import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
 
+
 export default function Header() {
     const [darkMode, setDarkMode] = useState(false);
     const [isSmallScreen, setIsSmallScreen] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const { theme, toggleTheme } = useTheme();
+    const { theme, toggleTheme } = useTheme() || {};
 
     useEffect(() => {
         const mediaQuery = window.matchMedia("(max-width: 768px)");
@@ -59,10 +60,14 @@ export default function Header() {
                                 <a href="#Contact" className="text-xs font-semibold leading-6 background">Contactme</a>
                                 <button type="button" className="text-xs font-semibold leading-6 background"> {!darkMode ? <DarkModeIcon className="" onClick={() => {
                                     setDarkMode(!darkMode)
-                                    toggleTheme()
+                                    if (toggleTheme) {
+                                        toggleTheme();
+                                    }
                                 }} /> : <Brightness7Icon onClick={() => {
                                     setDarkMode(!darkMode)
-                                    toggleTheme()
+                                    if (toggleTheme) {
+                                        toggleTheme();
+                                    }
                                 }} />}</button>
                             </div>
                         </nav>
@@ -80,10 +85,14 @@ export default function Header() {
                         <div className="container2 flex gap-3">
                             <button type="button" className="text-xs font-semibold leading-6 background"> {!darkMode ? <DarkModeIcon className="" onClick={() => {
                                 setDarkMode(!darkMode)
-                                toggleTheme()
+                                if (toggleTheme) {
+                                    toggleTheme();
+                                }
                             }} /> : <Brightness7Icon onClick={() => {
                                 setDarkMode(!darkMode)
-                                toggleTheme()
+                                if (toggleTheme) {
+                                    toggleTheme();
+                                }
                             }} />}</button>
                             <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
                                 {isMenuOpen ? (<CloseIcon />) : (<GridViewIcon />)}
