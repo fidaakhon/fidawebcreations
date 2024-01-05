@@ -1,0 +1,10 @@
+.accordi0n {
+    width: 70vw;
+}
+
+@media screen and (max-width: 768px) {
+    .accordi0n {
+        width: 90vw;
+    }
+    
+}

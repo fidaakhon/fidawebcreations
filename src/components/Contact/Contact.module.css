@@ -1,0 +1,61 @@
+.container{
+    display: flex;
+    padding: 2rem 0;
+    justify-content: space-between;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.name {
+    /* height: 50px; */
+    background-color: hsl(250, 70%, 96%, 1);
+    padding: 5px ;
+    border-radius: 5px;
+    margin: 10px 20px;
+}
+
+.btn {
+    background-color: hsl(250, 69%, 61%, 1);
+    padding: 15px ;
+    border-radius: 5px;
+    margin: 10px 20px;
+    color: white;
+    font-size: 10px;
+}
+.btn:hover {
+    background-color: hsl(250, 69%, 61%, 0.8);
+    cursor: pointer;
+}
+
+.outerContainer {
+    margin: auto 15vw;
+}
+.NameEmail {
+    display: flex;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .btn {
+        width: 40%;
+        padding: 20px 10px;
+    }
+    .outerContainer {
+        margin: auto 1vw;
+        width: 95vw;
+    }
+    .name {
+        width: 90vw;
+    }
+    .NameEmail {
+        width: 90vw;
+        flex-direction: column;
+    }
+}

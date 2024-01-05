@@ -1,0 +1,21 @@
+.smallManu {
+    top: 90vh;
+    width: 100%;
+}
+
+.container1 {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    padding: 10px;
+}
+
+.smallManu1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 50px;
+    row-gap: 10px;
+    justify-items: center;
+    width: 100vw;
+    padding: 10px;
+}
