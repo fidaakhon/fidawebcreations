@@ -1,8 +1,15 @@
 "use client";
 import BasicAccordion from "./Accordion";
 import styles from "./Skills.module.css";
+import React  from "react";
+import { useState, useEffect } from "react";
 
 export default function Skills() {
+    const [isClient, setIsClient] = useState(false)
+
+    useEffect(() => {
+        setIsClient(true)
+    }, [])
     return (
         <div className="z-0" >
             <div className="heading mb-8">
@@ -11,7 +18,7 @@ export default function Skills() {
             </div>
             <div className="flex justify-center">
                 <div className={styles.accordi0n}>
-                    <BasicAccordion />
+                    {isClient && <BasicAccordion />}
                 </div>
             </div>
         </div>

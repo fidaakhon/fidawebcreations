@@ -4,14 +4,13 @@ import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import { useState, useEffect } from 'react';
 
 const Education = () => {
-    const [width, setWidth] = useState(window.innerWidth);
     const [isSmallScreen, setIsSmallScreen] = useState(false);
     useEffect(() => {
-        const handleResize = () => setWidth(window.innerWidth);
-        window.addEventListener("resize", handleResize);
-        if (width < 768) {
+        const mediaQuery = window.matchMedia("(max-width: 768px)");
+        if (mediaQuery.matches) {
             setIsSmallScreen(true);
-        } else {
+        }
+        else {
             setIsSmallScreen(false);
         }
     }, []);

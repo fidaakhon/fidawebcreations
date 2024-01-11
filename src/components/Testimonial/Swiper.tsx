@@ -17,13 +17,14 @@ import react from 'react';
 import { useEffect, useState } from 'react';
 
 export default () => {
-    const [width, setWidth] = useState(window.innerWidth);
     const [isScreenSmall, setIsScreenSmall] = useState(false);
 
     useEffect(() => {
-        if (width < 769) {
+        const mediaQuery = window.matchMedia("(max-width: 768px)");
+        if (mediaQuery.matches) {
             setIsScreenSmall(true);
-        } else {
+        }
+        else {
             setIsScreenSmall(false);
         }
     }, []);
