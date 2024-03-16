@@ -8,7 +8,7 @@ export default function Skills() {
     const [isClient, setIsClient] = useState(false)
 
     useEffect(() => {
-        setIsClient(true)
+        setIsClient(true)  //hydration remedy
     }, [])
     return (
         <div className="z-0" >
